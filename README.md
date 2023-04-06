@@ -11,8 +11,6 @@ SVMs can be used for linear classification purposes. In addition to performing l
 
 # **2. Support Vector Machines intuition** <a class="anchor" id="2"></a>
 
-[Table of Contents](#0.1)
-
 
 Now, we should be familiar with some SVM terminology. 
 
@@ -25,6 +23,8 @@ A hyperplane is a decision boundary which separates between given set of data po
 ### Support Vectors
 
 Support vectors are the sample data points, which are closest to the hyperplane.  These data points will define the separating line or hyperplane better by calculating margins.
+
+
 
 
 ### Margin
@@ -69,3 +69,32 @@ In such a situation, SVMs uses a `kernel trick` to transform the input space to 
 
 ![Kernel trick](http://www.aionlinecourse.com/uploads/tutorials/2019/07/11_21_kernel_svm_3.png)
 
+# **3. Kernel trick** <a class="anchor" id="3"></a>
+
+
+
+In practice, SVM algorithm is implemented using a `kernel`. It uses a technique called the `kernel trick`. In simple words, a `kernel` is just a function that maps the data to a higher dimension where data is separable. A kernel transforms a low-dimensional input data space into a higher dimensional space. So, it converts non-linear separable problems to linear separable problems by adding more dimensions to it. Thus, the kernel trick helps us to build a more accurate classifier. Hence, it is useful in non-linear separation problems.
+
+We can define a kernel function as follows-
+
+
+### Kernel function
+
+![Kernel function](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTodZptqcRor0LGo8Qn7_kJB9n9BACMt6jgIPZ4C3g_rgh_uSRZLQ&s)
+
+
+## **3.1 Linear kernel**
+
+In linear kernel, the kernel function takes the form of a linear function as follows-
+
+**linear kernel : K(xi , xj ) = xiT xj**
+
+Linear kernel is used when the data is linearly separable. It means that data can be separated using a single line. It is one of the most common kernels to be used. It is mostly used when there are large number of features in a dataset. Linear kernel is often used for text classification purposes.
+
+Training with a linear kernel is usually faster, because we only need to optimize the C regularization parameter. When training with other kernels, we also need to optimize the γ parameter. So, performing a grid search will usually take more time.
+
+Linear kernel can be visualized with the following figure.
+
+### Linear Kernel
+
+![Linear Kernel](https://scikit-learn.org/stable/_images/sphx_glr_plot_svm_kernels_thumb.png)
