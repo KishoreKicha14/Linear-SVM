@@ -1,7 +1,7 @@
-# Linear-SVM
 
 # **1. Introduction to Support Vector Machines** <a class="anchor" id="1"></a>
 
+I have added the math in svm.pdf file in the repo pls do read. It add for me to get a better understanding on svm. 
 
 **Support Vector Machines** (SVMs in short) are machine learning algorithms that are used for classification and regression purposes. SVMs are one of the powerful machine learning algorithms for classification, regression and outlier detection purposes. An SVM classifier builds a model that assigns new data points to one of the given categories. Thus, it can be viewed as a non-probabilistic binary linear classifier.
 
